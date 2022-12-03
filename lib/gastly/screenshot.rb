@@ -19,6 +19,7 @@ module Gastly
       @cookies = kwargs.delete(:cookies)
 
       @image = MiniMagick::Image.create(DEFAULT_FILE_FORMAT, false) # Disable validation
+      binding.pry
 
       kwargs.each { |key, value| instance_variable_set(:"@#{key}", value) }
     end
