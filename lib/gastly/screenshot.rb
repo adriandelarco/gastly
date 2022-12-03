@@ -18,7 +18,7 @@ module Gastly
       @url = url
       @cookies = kwargs.delete(:cookies)
 
-      @image = MiniMagick::Image.create(DEFAULT_FILE_FORMAT, false) # Disable validation
+      @image = MiniMagick::Image.create(DEFAULT_FILE_FORMAT, false, {path: '/ruta/del/directorio'}) # Disable validation
       binding.pry
 
       kwargs.each { |key, value| instance_variable_set(:"@#{key}", value) }
